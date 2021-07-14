@@ -54,6 +54,8 @@ Presentation > Business > Data
 @Controller annotation
 ### Request Mapping
 @GetMapping (value = "/endpoint")
+@PostMapping (value = "/endpoint")
+@ModelAttribute
 
 ### Passing Parameters
 
@@ -65,8 +67,29 @@ Binding object attribute
 Works with POJOs
 Can be Validated binding
 
-
 ### Working
 1. @SpringBootApplication extends SpringBootServletInitializer : create a dispatcher servlet and start serving up things
 2. It scans and navigates through all controllers.
 3. prefix and suffix in application properties help in finding and resolving jsp views
+4. @Configuration annotated classes are scanned at classpath and their beans are
+   loaded.
+
+### Views
+View Technologies like JSPs, templating tools like Thymeleaf, JSF, etc.
+#### View Configuration
+1. Convention of keeping views under WEB-INF to avoid deep linking/bookmarking.
+2. RESOLVING A VIEW >
+   1. InternalResourceViewResolver: Defined as a @Bean in a Config class with 
+      @Configuration annotation. Suffix, Prefix and order can be set.
+      Just the same as done in application.properties.
+      return the bean.
+3. Controller (passes Model) -> ViewResolver (can even be custom) -> View
+
+### Resolve Static Files
+
+@Override
+public void addResourceHandlers(ResourceHandlerRegistry registry) {
+   registry
+      .addResourceHandler("/files/**")
+      .addResourceLocations("/WEB-INF/pdf/");
+}
