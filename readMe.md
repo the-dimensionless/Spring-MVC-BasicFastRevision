@@ -87,6 +87,8 @@ View Technologies like JSPs, templating tools like Thymeleaf, JSF, etc.
 
 ### Resolve Static Files
 
+Configuration class implements WebMvcConfigurer
+
 @Override
 public void addResourceHandlers(ResourceHandlerRegistry registry) {
    registry
