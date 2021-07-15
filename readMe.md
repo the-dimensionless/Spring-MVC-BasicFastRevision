@@ -95,3 +95,12 @@ public void addResourceHandlers(ResourceHandlerRegistry registry) {
       .addResourceHandler("/files/**")
       .addResourceLocations("/WEB-INF/pdf/");
 }
+
+### Using Java Server Pages with Spring MVC
+#### I18N and Interceptors
+Internationalization   
+1. LocaleResolver as Bean
+2. LocaleChangeInterceptor as Bean
+3. ?lang="code"
+
+### POST redirect GET
