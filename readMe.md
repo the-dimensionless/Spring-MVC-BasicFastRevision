@@ -104,3 +104,4 @@ Internationalization
 3. ?lang="code"
 
 ### POST redirect GET
+return "redirect:<VIEW NAME>"
