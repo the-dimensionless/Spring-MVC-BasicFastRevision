@@ -130,3 +130,7 @@ Bean Validator is an instance of hibernate validator
 @Valid annotation on Model
  REQ -> controller -> Validator -> Binding result -> take action if err
 
+### Restful Spring
+
+* @RestController
+
