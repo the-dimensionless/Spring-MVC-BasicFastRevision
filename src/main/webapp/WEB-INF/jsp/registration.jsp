@@ -25,15 +25,18 @@
     <form:errors path="*" cssClass="errorblock" element="div" />
     <table>
         <tr>
-            <spring:message code="name" />
-        </tr>
-        </td>
-            <td>
-               <form:input path="name" />
-               </td>
+                <td>
+                    <spring:message code="name" />
+                </td>
+                <td>
+                   <form:input path="name" />
+                </td>
+                <td>
+                    <form:errors path="name" cssClass="error" />
+                </td>
          </tr>
          <tr>
-             <td colspan="2">
+             <td colspan="3">
                 <input type="submit" value="Add Registration" />
               </td>
           </tr>
