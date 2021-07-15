@@ -105,3 +105,8 @@ Internationalization
 
 ### POST redirect GET
 return "redirect:<VIEW NAME>"
+
+### Templating Frameworks ex Thymeleaf
+Lightweight html5 framework
+templating tool easily integrated with spring boot
+
