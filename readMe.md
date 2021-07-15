@@ -110,3 +110,15 @@ return "redirect:<VIEW NAME>"
 Lightweight html5 framework
 templating tool easily integrated with spring boot
 
+Tip: Order of dependencies matter in how they are loaded in the classpath.
+
+### Template Resolver vs View Resolver
+locate template files vs sets order and references them
+Template Engine is needed
+TR looks up the template
+VR returns the resulting template
+setOrder() > JSPs order
+like if 2 files have same name .jsp, .template
+orderwise priority
+Complex config to have both jsp and thymeleaf together
+

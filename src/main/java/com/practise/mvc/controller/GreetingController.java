@@ -14,4 +14,11 @@ public class GreetingController {
         // returns a jsp page with name greeting, jsp is suffixed from application.properties
         return "greeting";
     }
+
+    @GetMapping("thyme")
+    public String greetingThyme (Map<String, Object> model) {
+        model.put("message", "Hello Thymeleaf");
+        // returns a jsp page with name greeting, jsp is suffixed from application.properties
+        return "thyme";
+    }
 }
